@@ -1,12 +1,21 @@
 // You can add your native dependencies here
 dependencies {
-//  implementation 'androidx.multidex:multidex:2.0.1'
+    constraints {
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.21"
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.21"
+    }
 }
 
 android {
   compileSdkVersion 33
   buildToolsVersion "33"
   // ndkVersion ""
+  packagingOptions {
+      pickFirst "lib/x86/libc++_shared.so"
+      pickFirst "lib/x86_64/libc++_shared.so"
+      pickFirst "lib/armeabi-v7a/libc++_shared.so"
+      pickFirst "lib/arm64-v8a/libc++_shared.so"
+  }
 
   defaultConfig {
     minSdkVersion 23
@@ -15,7 +24,7 @@ android {
     // Version Information
     versionCode 1
     versionName "1.0.0"
-    
+
     generatedDensities = []
   }
 
