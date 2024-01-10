@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core'
+import { RiveView } from '@nativescript/rive'
+
+import { registerElement } from '@nativescript/angular'
+registerElement('RiveView', () => RiveView)
+
 
 import { Item } from './item'
 import { ItemService } from './item.service'
