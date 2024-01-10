@@ -7,8 +7,8 @@ dependencies {
 }
 
 android {
-  compileSdkVersion 33
-  buildToolsVersion "33"
+  compileSdkVersion 34
+  buildToolsVersion "34.0.0"
   // ndkVersion ""
   packagingOptions {
       pickFirst "lib/x86/libc++_shared.so"
@@ -18,8 +18,8 @@ android {
   }
 
   defaultConfig {
-    minSdkVersion 23
-    targetSdkVersion 33
+    minSdkVersion 24
+    targetSdkVersion 34
 
     // Version Information
     versionCode 1
